@@ -2,18 +2,23 @@
 const express = require("express");
 const cors = require("cors");
 const pool = require("./db");
+// const path = require("path");
 // const morgan = require('morgan');
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+app.use(cors());
+app.use(express.json());
+// app.use(morgan('tiny'));
 
+
+//For deployment
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
     console.log(`Listening on port ${PORT}`);
 });
 
-app.use(cors());
-app.use(express.json());
-// app.use(morgan('tiny'));
+app.use(express.static("./client/build"));
+
 
 //Routes
 
