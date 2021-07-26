@@ -3,3 +3,11 @@ This app lists out all the 14'ers in Colorado and helps you keep track of when y
 Code used for formatting from W3 school for bootstrap.
 
 Heroku/Netlify tutorial from here: https://www.fabiofranchino.com/blog/how-to-deploy-webapp-heroku-netlify/
+
+Packages Used:
+
+Express,
+CORS,
+PG,
+React,
+Bootstrap 5
