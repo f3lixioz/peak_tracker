@@ -2,7 +2,7 @@
 const express = require("express");
 const cors = require("cors");
 const pool = require("./db");
-// const path = require("path");
+const path = require("path");
 // const morgan = require('morgan');
 
 const app = express();
@@ -17,7 +17,7 @@ app.listen(PORT, () => {
     console.log(`Listening on port ${PORT}`);
 });
 
-app.use(express.static("./client/build"));
+app.use(express.static(path.join(__dirname, "client/build")));
 
 
 //Routes
